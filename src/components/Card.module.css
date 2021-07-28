@@ -1,0 +1,75 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 20vh;
+  color: #ffffff;
+}
+.card + .card {
+  border-left: solid 1px #0000001e;
+}
+
+.card > img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.primary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 5vh 15vh;
+  width: 20rem;
+  padding: 0 0.5rem;
+}
+.primary > span {
+  margin-top: 0.5rem;
+  grid-column: 1 / span 2;
+}
+.primary > img {
+  width: 8rem;
+  height: 8rem;
+}
+
+.name {
+  background-color: #0000005e;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+.temp {
+  display: flex;
+  flex-direction: column;
+  width: 3rem;
+  justify-content: center;
+  text-align: center;
+}
+.temp + .temp {
+  margin-left: 1rem;
+}
+.temps {
+  display: flex;
+}
+.button {
+  border: solid 2px transparent;
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  width: 1.5rem;
+  padding: 0;
+  height: 1.5rem;
+  align-items: center;
+  background-color: transparent;
+  transition: background-color 0.25s, color 0.25s;
+  cursor: pointer;
+  color: #ffffff;
+  margin-left: 0.5rem;
+  margin-right: -0.5rem;
+}
+.button:hover {
+  background-color: #ffffffab;
+  color: #f8485e;
+}
