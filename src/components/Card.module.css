@@ -5,6 +5,7 @@
   align-items: center;
   width: 10rem;
   height: 20vh;
+  min-height: 12rem;
   color: #ffffff;
 }
 .card + .card {
@@ -24,7 +25,7 @@
   padding: 0 0.5rem;
 }
 .primary > span {
-  margin-top: 0.5rem;
+  margin-top: 1.25rem;
   grid-column: 1 / span 2;
 }
 .primary > img {

@@ -20,12 +20,13 @@
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 50vh 20vh;
+  grid-template-rows: 1fr minmax(12rem, 20vh);
 }
 
 .citiesContainer {
   display: flex;
   height: 20vh;
+  min-height: 12rem;
   background-color: #ffffff78;
   backdrop-filter: blur(16px);
   justify-content: space-between;
