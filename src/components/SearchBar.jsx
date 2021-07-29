@@ -4,8 +4,15 @@ import { IoAdd } from "react-icons/io5";
 
 export default function SearchBar({ onSearch }) {
   // acá va tu código
-  const handleOnSearch = () =>
-    onSearch(document.getElementById("searchInput").value);
+  const [search, setSearch] = React.useState("");
+
+  const handleOnSearch = () => {
+    // const input = document.getElementById("searchInput");
+    // onSearch(input.value);
+    // input.value = "";
+    onSearch(search);
+    setSearch("");
+  };
 
   return (
     <div className={styles.searchBar}>
@@ -13,6 +20,12 @@ export default function SearchBar({ onSearch }) {
         className={styles.input}
         id="searchInput"
         placeholder="Agregar una ciudad..."
+        autoComplete="off"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        onKeyPress={(e) => {
+          if (e.key === "Enter") handleOnSearch();
+        }}
       />
       <button className={styles.button} onClick={handleOnSearch}>
         <IoAdd />
