@@ -3,6 +3,7 @@ import Card from "./components/Card.jsx";
 import Cards from "./components/Cards.jsx";
 import SearchBar from "./components/SearchBar.jsx";
 import fetchCity from "./services/fetchCity";
+import fetchCoords from "./services/fetchCoords.js";
 
 import styles from "./App.module.css";
 
@@ -22,6 +23,13 @@ function App() {
       return prevData.filter((city) => city.id !== id);
     });
   }
+
+  React.useEffect(() => {
+    if (navigator.geolocation)
+      navigator.geolocation.getCurrentPosition((pos) => {
+        fetchCoords(pos.coords.latitude, pos.coords.longitude, setData);
+      });
+  }, []);
 
   return (
     <div className={styles.app}>
