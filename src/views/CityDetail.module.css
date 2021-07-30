@@ -1,0 +1,13 @@
+.city {
+  color: white;
+}
+.detail {
+  display: flex;
+  flex-direction: column;
+}
+.prop {
+  display: flex;
+}
+.prop > label {
+  margin-right: 0.5rem;
+}

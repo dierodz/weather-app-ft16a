@@ -24,7 +24,7 @@
   width: 20rem;
   padding: 0 0.5rem;
 }
-.primary > span {
+.primary > .name {
   margin-top: 1.25rem;
   grid-column: 1 / span 2;
 }
